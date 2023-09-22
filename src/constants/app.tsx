@@ -1,0 +1,70 @@
+import {
+  NETWORK_GOERLI,
+  NETWORK_KOVAN,
+  NETWORK_MUMBAI,
+  NETWORK_OPTIMISM_TESTNET,
+  NETWORK_RINKEBY,
+} from './networks';
+
+export const ERC_20_CONTRACT = {
+  address: '0xE8B0a2B0Ec112294E6c43cdfDe0Ead401be581e9',
+  network: NETWORK_RINKEBY,
+};
+
+// nft
+export const NFT_CONTRACT = {
+  address: '0x199574dAEf933220C37b00b3f5412c8B3E0fE0db',
+  network: NETWORK_KOVAN,
+};
+
+// voting
+export const VOTING_CONTRACT = {
+  address: '0xDe91fc8F33b90f974AcB5D3a3A1221117Ac9E19B',
+  network: NETWORK_OPTIMISM_TESTNET,
+};
+
+// nft
+export const NFT_SHAREHOLDER_NFT_CONTRACT = {
+  address: '0x364d0058F221631bc748D7E786Dd3EE31f3ba624',
+  network: NETWORK_RINKEBY,
+};
+
+export const KYC_CONTRACT = {
+  address: '0x250A1d02EBD813a84D4680deC323f16901F96D88',
+  network: NETWORK_RINKEBY,
+};
+
+// payment splitter
+export const PAYMENT_SPLITTER_CONTRACT = {
+  address: '0x367559e2c99D37A15840009ee20F71b6e4C33D4D',
+  network: NETWORK_RINKEBY,
+};
+
+// payment splitter
+export const P2E_LEVEL_UP_NFT_CONTRACT = {
+  address: '0x291199D9488D79f78e9499C73641336e2928ea1b',
+  network: NETWORK_MUMBAI,
+};
+export const P2E_TOKEN_CLAIM_CONTRACT = {
+  address: '0x506f8CF5E36541997A5731F1D02041fdA2458990',
+  network: NETWORK_MUMBAI,
+};
+
+// 0x4d1d39Bd6D16c4386DD291EBaF631274a1148051
+// 0x34D3e1E5524C3e24C3a3028265058d54aFe37acc
+// 0x478e6AA1cfDC468f32a1BfE290fC07a2a7Eb35A3
+export const CASE_NFT = {
+  address: '0xE75Ee14cC9e2C58C4B26E1aEb91Efdf3c0D7c158',
+  network: NETWORK_MUMBAI,
+};
+
+// SNFT
+export const SNFT_FACTORY = {
+  address: '0xae501129e7b6690864c865faBb35A85e8Efe40a1',
+  network: NETWORK_GOERLI,
+};
+
+export const SNFT_FEE_POOL = {
+  address: '0xF1eC6fe49490d4dADa20016182EBF0B205153CE0',
+  network: NETWORK_GOERLI,
+};
