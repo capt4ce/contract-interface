@@ -1,6 +1,7 @@
 import PageHome from '../pages/PageHome';
 
 import defaultLogo from '../logo.svg';
+import PageDiamondFacetParams from '../pages/PageDiamondFacetParams';
 
 type PageInterface = {
   path: string;
@@ -18,6 +19,12 @@ const getPages = (): PageInterface[] => {
       label: 'Contract Tester',
       pages: [],
       Component: PageHome,
+    },
+    {
+      path: 'diamond-facet',
+      label: 'Diamond Facet',
+      pages: [],
+      Component: PageDiamondFacetParams,
     },
   ];
 
