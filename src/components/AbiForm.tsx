@@ -58,6 +58,9 @@ const AbiForm = ({
   const generateParams = (values: FormikValues) => {
     return selectedAbi?.inputs
       ? (selectedAbi?.inputs).map(({ name, type, components }) => {
+          if (type?.includes('[]')) {
+            return JSON.parse(values[name || '']);
+          }
           if (type !== 'tuple') return name ? values[name] || '' : '';
 
           const params: string[] = [];
@@ -88,6 +91,7 @@ const AbiForm = ({
             provider
           );
 
+          console.log('generateParams', generateParams(processedValues));
           const tx = await contract[functionName](
             ...generateParams(processedValues)
           );
@@ -110,10 +114,10 @@ const AbiForm = ({
 
         return (
           <Form>
-            {inputs.map(({ name, type, components }) =>
-              type === 'tuple' &&
-              Array.isArray(components) &&
-              components.length > 0 ? (
+            {inputs.map(({ name, type, components }) => {
+              return type === 'tuple' &&
+                Array.isArray(components) &&
+                components.length > 0 ? (
                 <>
                   {components.map((component) => {
                     const inputName = `${name}_${component.name}`;
@@ -134,8 +138,8 @@ const AbiForm = ({
                   hide={hideDisabledFields && disabledFields[name || '']}
                   fieldCustomization={fieldCustomizations?.[name || '']}
                 />
-              )
-            )}
+              );
+            })}
             {additionalFields.map((additionalField) => (
               <AbiInput hide={false} {...additionalField} />
             ))}
