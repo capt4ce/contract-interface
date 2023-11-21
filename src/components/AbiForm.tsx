@@ -66,7 +66,14 @@ const AbiForm = ({
           const params: string[] = [];
           (components || []).forEach((component) => {
             const inputName = `${name}_${component.name}`;
-            params.push(values[inputName]);
+            let value = values[inputName];
+            if (
+              component.type?.includes('[') &&
+              component.type?.includes('[')
+            ) {
+              value = JSON.parse(value);
+            }
+            params.push(value);
           });
           return params;
         })
@@ -100,7 +107,9 @@ const AbiForm = ({
         } catch (err) {
           alert(
             `error ${functionName}: ${
-              (err as any)?.response?.data?.message || JSON.stringify(err)
+              (err as any)?.response?.data?.message ||
+              (err as any)?.message ||
+              JSON.stringify(err)
             }`
           );
         }

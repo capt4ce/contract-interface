@@ -68,6 +68,9 @@ const PageHome = () => {
               <option value="erc20">erc20</option>
               <option value="erc721">erc721</option>
               <option value="erc1155">erc1155</option>
+              <option value="dopewarsController">dopewars:Controller</option>
+              <option value="dopewarsSwapmeet">dopewars:Swapmeet</option>
+              <option value="dopewarsHustler">dopewars:Hustler</option>
             </Select>
           </div>
 
