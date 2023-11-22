@@ -19,6 +19,7 @@ const PageHome = () => {
   const [customAbi, setCustomAbi] = useState('');
 
   const handleResult = (values: FormikValues, tx: any) => {
+    console.log('result:', tx);
     alert(JSON.stringify(tx));
   };
 
